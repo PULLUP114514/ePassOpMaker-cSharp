@@ -416,3 +416,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/ePassOpMaker/Dep/ffmpeg.exe
+/ePassOpMaker/Dep/ffplay.exe
+/ePassOpMaker/Dep/ffprobe.exe
