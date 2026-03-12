@@ -1,10 +1,139 @@
-<UserControl xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:Class="ePassOpMaker.Edit">
-		<StackPanel>
-				<TextBlock Text="This is Page1"/>
-		</StackPanel>
+		<Grid>
+				<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid Grid.Column="1" >
+						<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Grid Grid.Row="0"
+						HorizontalAlignment="Stretch" 
+						Margin="6">
+								<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Button Content="操作" Padding="15,6,15,6">
+										<Button.Flyout>
+												<MenuFlyout>
+														<MenuItem Header="新建项目"/>
+														<MenuItem Header="打开项目"/>
+														<MenuItem Header="保存"/>
+														<MenuItem Header="另存为"/>
+														<Separator/>
+														<MenuItem Header="退出"/>
+												</MenuFlyout>
+										</Button.Flyout>
+								</Button>
+								<ComboBox Grid.Column="1" Margin="6" SelectedIndex="0">
+										<ComboBoxItem Content="基础设置" IsSelected="True"/>
+										<ComboBoxItem Content="高级设置" IsSelected="False"/>
+								</ComboBox>
+						</Grid>
+						<Border BorderBrush="Gray"
+								BorderThickness="1"
+								CornerRadius="6"
+								Padding="15"
+								Margin="6"
+								Grid.Row="1">
+								<Grid>
+										<StackPanel>
+												<TextBlock Text="基本信息"
+														   HorizontalAlignment="Center"
+														   VerticalAlignment="Top"/>
+												<Grid>
+														<Grid.ColumnDefinitions>
+																<ColumnDefinition Width="Auto"/>
+																<ColumnDefinition/>
+														</Grid.ColumnDefinitions>
+														<Label Grid.Column="0"
+															   Content="名称:"
+															   Margin="0,0,6,0"
+															   VerticalAlignment="Center"
+															   HorizontalAlignment="Left"/>
+														<TextBox Grid.Column="1"
+																 Margin="6"
+																 Width="200"
+																 VerticalAlignment="Center"
+																 HorizontalAlignment="Right"/>
+												</Grid>
+												<Grid>
+														<Grid.ColumnDefinitions>
+																<ColumnDefinition Width="Auto"/>
+																<ColumnDefinition/>
+														</Grid.ColumnDefinitions>
+														<Label Grid.Column="0"
+															   Content="分辨率:"
+															   Margin="0,0,6,0"
+															   VerticalAlignment="Center"
+															   HorizontalAlignment="Left"/>
+														<ComboBox Grid.Column="1"
+																  Margin="6"
+																  Name="ComboBox_ResolutionSelector"
+																  VerticalAlignment="Center"
+																  HorizontalAlignment="Stretch">
+
+														</ComboBox>
+												</Grid>
+										</StackPanel>
+								</Grid>
+						</Border>
+						<Border BorderBrush="Gray"
+								BorderThickness="1"
+								CornerRadius="6"
+								Padding="15"
+								Margin="6"
+								Grid.Row="2">
+								<Grid>
+										<StackPanel>
+												<TextBlock Text="视频设置"
+														   HorizontalAlignment="Center"
+														   VerticalAlignment="Top"/>
+												<Grid>
+														<Grid.ColumnDefinitions>
+																<ColumnDefinition Width="Auto"/>
+																<ColumnDefinition/>
+														</Grid.ColumnDefinitions>
+														<Label Grid.Column="0"
+															   Content="名称:"
+															   Margin="0,0,6,0"
+															   VerticalAlignment="Center"
+															   HorizontalAlignment="Left"/>
+														<TextBox Grid.Column="1"
+																 Margin="6"
+																 Width="200"
+																 HorizontalAlignment="Right"/>
+												</Grid>
+												<Grid>
+														<Grid.ColumnDefinitions>
+																<ColumnDefinition Width="Auto"/>
+																<ColumnDefinition/>
+														</Grid.ColumnDefinitions>
+														<Label Grid.Column="0"
+															   Content="分辨率:"
+															   Margin="0,0,6,0"
+															   VerticalAlignment="Center"
+															   HorizontalAlignment="Left"/>
+														<TextBox Grid.Column="1"
+																 Margin="6"
+																 Width="200"
+																 HorizontalAlignment="Right"/>
+												</Grid>
+										</StackPanel>
+								</Grid>
+						</Border>
+				</Grid>
+		</Grid>
 </UserControl>

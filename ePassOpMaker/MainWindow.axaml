@@ -12,7 +12,7 @@
 				<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="Auto"/>
 						<ColumnDefinition/>
-						<ColumnDefinition/>
+						<ColumnDefinition Width="Auto"/>
 				</Grid.ColumnDefinitions>
 				<Grid Grid.Column="0">
 						<Grid.RowDefinitions>
@@ -61,7 +61,6 @@
 						</Button>
 
 				</Grid>
-
 				<ContentControl Grid.Column="1" x:Name="Content_Main"/>
 		</Grid>
 </Window>

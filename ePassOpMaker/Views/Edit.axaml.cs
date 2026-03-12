@@ -6,8 +6,12 @@ namespace ePassOpMaker;
 
 public partial class Edit : UserControl
 {
-    public Edit()
-    {
-        InitializeComponent();
-    }
+		public Edit()
+		{
+				InitializeComponent();
+		}
+
+		private void ComboBox_ResolutionSelector_Holding(object? sender, Avalonia.Input.HoldingRoutedEventArgs e)
+		{
+		}
 }
