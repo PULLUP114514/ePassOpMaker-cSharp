@@ -1,27 +1,29 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" 
-        d:DesignWidth="800" 
-        d:DesignHeight="450"
-        x:Class="ePassOpMaker.MainWindow"
-        Title="ePass Operators Resources Editor">
-   <Grid ShowGridLines="True">
-           <Grid.ColumnDefinitions>
-				   <ColumnDefinition Width="Auto"/>
-				   <ColumnDefinition/>
-				   <ColumnDefinition/>
-           </Grid.ColumnDefinitions>
-           <Grid Grid.Column="0">
-				   <StackPanel>
-						   <Button 
-                           Name="Button_PageSelectorEdit" 
-                           Margin="6" 
-                           Click="Button_PageSelectorEdit_Click">
-                                        <Image Source="avares://ePassOpMaker/Assets/dark/edit.png" Width="20"/>
-                           </Button>
-                   </StackPanel>
-           </Grid>
-   </Grid>
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		d:DesignWidth="800"
+		d:DesignHeight="450"
+		x:Class="ePassOpMaker.MainWindow"
+		Title="ePass Operators Resources Editor">
+		<Grid>
+				<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid Grid.Column="0">
+						<StackPanel>
+								<Button
+								Name="Button_PageSelectorEdit"
+								Margin="6"
+								Width="50"
+								Height="50"
+								Click="Button_PageSelectorEdit_Click">
+										<Image Name="Image_PageSelectorEdit" Source="avares://ePassOpMaker/Assets/light/edit.png" Width="20"/>
+								</Button>
+						</StackPanel>
+				</Grid>
+		</Grid>
 </Window>
