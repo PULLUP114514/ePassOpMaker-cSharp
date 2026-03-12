@@ -1,15 +1,19 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
 using Avalonia.Styling;
 using System;
 using System.Diagnostics;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
-
 namespace ePassOpMaker
 {
 		public partial class MainWindow : Window
 		{
+
+				ePassOpMaker.Edit editPage = new ePassOpMaker.Edit();
+				ePassOpMaker.Flash flashPage = new ePassOpMaker.Flash();
+
 				public MainWindow()
 				{
 						InitializeComponent();
@@ -21,11 +25,9 @@ namespace ePassOpMaker
 						// 刚启动时重设主题颜色
 						var theme = Application.Current!.ActualThemeVariant;
 						OnThemeChanged(theme);
-				}
 
-				private void Button_PageSelectorEdit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-				{
-						return;
+						// 重置主页
+						Content_Main.Content = editPage;
 				}
 
 
@@ -52,6 +54,23 @@ namespace ePassOpMaker
 						Image_PageSelectorEdit.Source =
 							new Bitmap(AssetLoader.Open(
 								new Uri($"avares://ePassOpMaker/Assets/{currentTheme}/edit.png")));
+						Image_PageSelectorFlash.Source =
+							new Bitmap(AssetLoader.Open(
+								new Uri($"avares://ePassOpMaker/Assets/{currentTheme}/flash.png")));
+						Image_PageSelectorSettings.Source =
+							new Bitmap(AssetLoader.Open(
+								new Uri($"avares://ePassOpMaker/Assets/{currentTheme}/settings.png")));
+				}
+
+				private void Button_PageSelectorEdit_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+				{
+						Content_Main.Content = editPage;
+						return;
+				}
+				private void Button_PageSelectorFlash_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+				{
+						Content_Main.Content = flashPage;
+						return;
 				}
 		}
 }

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <PublishAot>False</PublishAot>
   </PropertyGroup>
   <ItemGroup>
 	<AvaloniaResource Include="Assets\**" />
@@ -35,5 +36,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
 	
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="新文件夹\" />
   </ItemGroup>
 </Project>
