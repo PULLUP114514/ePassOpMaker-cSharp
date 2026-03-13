@@ -72,5 +72,9 @@ namespace ePassOpMaker
 						Content_Main.Content = flashPage;
 						return;
 				}
+
+				private void Button_PageSelectorSettings_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+				{
+				}
 		}
 }

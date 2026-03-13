@@ -2,7 +2,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
 			 x:Class="ePassOpMaker.Edit">
 		<Grid>
 				<Grid.ColumnDefinitions>
@@ -18,25 +18,23 @@
 								<RowDefinition/>
 						</Grid.RowDefinitions>
 						<Grid Grid.Row="0"
-						HorizontalAlignment="Stretch" 
-						Margin="6">
+							  HorizontalAlignment="Stretch"
+							  Margin="6">
 								<Grid.ColumnDefinitions>
 										<ColumnDefinition Width="Auto"/>
 										<ColumnDefinition Width="Auto"/>
 										<ColumnDefinition/>
 								</Grid.ColumnDefinitions>
-								<Button Content="操作" Padding="15,6,15,6">
-										<Button.Flyout>
-												<MenuFlyout>
-														<MenuItem Header="新建项目"/>
-														<MenuItem Header="打开项目"/>
-														<MenuItem Header="保存"/>
-														<MenuItem Header="另存为"/>
-														<Separator/>
-														<MenuItem Header="退出"/>
-												</MenuFlyout>
-										</Button.Flyout>
-								</Button>
+								<Menu Grid.Column="0">
+										<MenuItem Header="操作   ▼">
+												<MenuItem Header="新建项目" InputGesture="Ctrl+N"/>
+												<MenuItem Header="打开项目" InputGesture="Ctrl+O"/>
+												<MenuItem Header="保存" InputGesture="Ctrl+S"/>
+												<MenuItem Header="另存为" InputGesture="Ctrl+Shift+S"/>
+												<Separator/>
+												<MenuItem Header="退出" InputGesture="Ctrl+Q"/>
+										</MenuItem>
+								</Menu>
 								<ComboBox Grid.Column="1" Margin="6" SelectedIndex="0">
 										<ComboBoxItem Content="基础设置" IsSelected="True"/>
 										<ComboBoxItem Content="高级设置" IsSelected="False"/>
@@ -84,7 +82,6 @@
 																  Name="ComboBox_ResolutionSelector"
 																  VerticalAlignment="Center"
 																  HorizontalAlignment="Stretch">
-
 														</ComboBox>
 												</Grid>
 										</StackPanel>
